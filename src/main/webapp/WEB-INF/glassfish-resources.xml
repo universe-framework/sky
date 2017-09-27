@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <jdbc-connection-pool driver-classname="com.mysql.jdbc.Driver"
+                          datasource-classname="com.mysql.jdbc.Driver"
+                          name="sky-Pool"
+                          res-type="java.sql.Driver">
+        <property name="user" value="universe"/>
+        <property name="password" value="universe"/>
+        <property name="URL" value="jdbc:mysql://dev.petuniversal.com/universe"/>
+    </jdbc-connection-pool>
+    <jdbc-resource enabled="true" jndi-name="java:app/jdbc/sky-dev_bd" object-type="user" pool-name="sky-Pool"/>
+</resources>
